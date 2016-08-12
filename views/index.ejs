@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grocery List</title>
+</head>
+<body>
+  <form action="/grocery" method="post">
+    <input type="text" name="item">
+    <input type="number" name="qty">
+    <input type="submit" value="+ Add items">
+</form>
+
+<ul>
+  <% for (idx in groceries) { %>
+  <li><%= groceries[idx]['item'] %> <%= groceries[idx]['qty'] %></li>
+  <% } %>
+</ul>
+</body>
+</html>
